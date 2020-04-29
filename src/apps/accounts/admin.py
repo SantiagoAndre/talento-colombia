@@ -6,6 +6,7 @@ from django.contrib.auth.models import Group
 from django.conf.urls import url
 
 from django.utils.html import format_html
+from django.shortcuts import redirect
 from django.urls import reverse
 
 from admin_object_actions.admin import ModelAdminObjectActionsMixin
@@ -50,6 +51,7 @@ class SnippetAdmin(ModelAdminObjectActionsMixin,admin.ModelAdmin):
             self.form = self.change_form
 
         return super(SnippetAdmin, self).get_form(request, obj, **kwargs)
+    def response_add(self, request, obj, post_url_continue=None):
+        return redirect('/accounts/accounts/user')
 
-
-admin.site.unregister(Group)
+#admin.site.unregister(Group)
