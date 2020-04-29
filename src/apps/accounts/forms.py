@@ -39,8 +39,8 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = User
-        #exclude = ('user_type','password','last_login','date_joined',)
-        fields = ('username','first_name','last_name','email','is_active','is_superuser','groups')
+        exclude = ('user_type','password','last_login','date_joined',)
+       # fields = ('username','first_name','last_name','email','is_active','is_superuser','groups')
         required_fields = ('username','first_name','last_name','email')
     
     def valide_required_field(self,field):
