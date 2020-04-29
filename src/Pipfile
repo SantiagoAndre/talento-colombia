@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+graphene-django = "*"
+django-filter = "*"
+django-graphql-jwt = "*"
+django-admin-object-actions = "*"
+
+[dev-packages]
+pylint = "*"
+pylint-django = "*"
+
+[requires]
+python_version = "3.8"

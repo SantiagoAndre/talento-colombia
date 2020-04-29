@@ -1,0 +1,9 @@
+Django==3.0.5  
+graphene==2.1.8  
+graphene-django==2.9.0  
+graphql-core==2.3.1  
+graphql-relay==2.0.1
+django-environ
+psycopg2
+mysqlclient
+django-admin-object-actions
