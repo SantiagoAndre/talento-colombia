@@ -117,11 +117,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-LOGOUT_REDIRECT_URL = '/jobcalls/'
+LOGOUT_REDIRECT_URL = '/'
 
-LOGIN_COMPANY_REDIRECT_URL = 'compay/jobcalls'
-LOGIN_ASPIRING_REDIRECT_URL= 'jobcalls'
-LOGIN_ADMIN_REDIRECT_URL = 'jobcalls'#accounts
+LOGIN_COMPANY_REDIRECT_URL = '/compay/jobcalls'
+LOGIN_ASPIRING_REDIRECT_URL= '/'
+LOGIN_ADMIN_REDIRECT_URL = 'accounts/'#accounts
 
 # USER MODEL AND LOGIN 
 AUTH_USER_MODEL = 'accounts.User'

@@ -15,8 +15,8 @@ class LoginView(LoginView):
         
         if self.request.user.is_superuser:
             return settings.LOGIN_ADMIN_REDIRECT_URL
-        if self.request.user.user_type == User.COMPANY:
+        if self.request.user.is_company:
             return settings.LOGIN_COMPANY_REDIRECT_URL
-        if self.request.user.user_type == User.ASPIRING:
+        if self.request.user.is_aspirant:
             return settings.LOGIN_ASPIRING_REDIRECT_URL
 
