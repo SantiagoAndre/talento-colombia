@@ -58,19 +58,12 @@
   
   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
   
-  {% for field in login_form %}
-      <p>
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-  {% endfor %}
-  {% if login_form.non_field_errors %}
-    <div style="color: red">
-      <p>{{login_form.non_field_errors}}</p>
+  <div class="card-footer">
+    <div class="d-flex justify-content-center">
+      <a href="{% url 'password_reset' %}">Forgot your password?</a>
     </div>
-      
-  {% endif %}
+  </div>
+
   
   <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
 

@@ -5,7 +5,7 @@ urlpatterns = [
 
     path('accounts', include('apps.accounts.urls')),
     path('jobcalls/', include('apps.jobcall.urls')),
-    path('/', include('apps.custom_session.urls')),
+    path('sessions/', include('apps.custom_session.urls')),
 
 ]
 

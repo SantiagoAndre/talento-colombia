@@ -10,7 +10,7 @@ class LoginView(LoginView):
     #form_class=LoginForm
     form_class = AuthenticationForm
     redirect_authenticated_user=True
-    template_name = 'auth/login.html'
+    template_name = 'registration/login.html'
     def get_success_url(self):
         
         if self.request.user.is_superuser:
