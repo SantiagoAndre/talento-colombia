@@ -1,8 +1,10 @@
-from django.shortcuts import render
 
+from django.views.generic import CreateView
+from django.shortcuts import render
 from django.views import View
 # Create your views here.
-from .models import JobCall
+from .forms import ApplyJobCallForm
+from .models import JobCall,AnonymousInscription
 
 def all_jobcalls(request):
   context = {
@@ -24,4 +26,13 @@ class AllJobCallsView(View):
   def push(self, request):
     pass
 
+class ApplyJobCallView(CreateView):
+  model = AnonymousInscription
+  form_class = ApplyJobCallForm
+  template_name = 'jobcall/apply.html'
+  success_url = '/jobcalls/'
+  def form_valid(self, form):
+    form.instance.jobcall = JobCall.objects.get(pk=self.kwargs['jobcall_id'])
+    return super().form_valid(form)
+  
 #class 

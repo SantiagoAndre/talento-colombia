@@ -1,0 +1,24 @@
+{% extends 'jobcall/jobcall.master.html' %}
+
+{% block content %}
+{{form.errors}}
+<div class="row">
+  <div class="col-12">
+    <h3 class="border-bottom border-gray pb-2 mb-0">Write a post</h3>
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="{{ form.full_name.id_for_label }}">{{ form.full_name.label }}</label>
+        {{ form.full_name }}
+        {{ form.full_name.errors }}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.curriculum.id_for_label }}">{{ form.curriculum.label }}</label>
+        {{ form.curriculum }}
+        {{ form.curriculum.errors }}
+      </div>
+      <input type="submit" value="Send" class="btn btn-primary" />
+    </form>
+  </div>
+</div>
+{% endblock %}

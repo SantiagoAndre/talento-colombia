@@ -30,4 +30,5 @@ class JobCall(models.Model):
 class AnonymousInscription(models.Model):
     full_name = models.CharField(_("full name"),max_length=150)
     jobcall = models.ForeignKey(JobCall,on_delete=models.CASCADE,verbose_name=_("anonymous aspirants"),blank=True)
+    curriculum = models.FileField(upload_to='jobcall/curriculums',verbose_name=_("curriculum"))
     #file = pk.pdf

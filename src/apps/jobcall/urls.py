@@ -1,7 +1,7 @@
 
 from django.urls import path
-from .views import all_jobcalls,AllJobCallsView
+from .views import ApplyJobCallView,AllJobCallsView
 urlpatterns = [
     path('', AllJobCallsView.as_view(), name='jobcall.jobcalls'),
-  #  path('apply/<int:jocall_id>/', all_jobcalls, name='jobcall.apply'),
+    path('apply/<int:jobcall_id>/', ApplyJobCallView.as_view(), name='jobcall.apply'),
 ]
