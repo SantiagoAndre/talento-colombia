@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'admin_object_actions',
     'apps.accounts',
-    'apps.jobcall'
+    'apps.jobcall',
+    'apps.custom_session'
 ]
 
 MIDDLEWARE = [
@@ -107,3 +108,25 @@ AUTH_USER_MODEL = 'accounts.User'
 
 MEDIA_URL = '/media/' 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+
+# SESSION SETTINGS
+
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+LOGOUT_REDIRECT_URL = '/jobcalls/'
+
+LOGIN_COMPANY_REDIRECT_URL = 'compay/jobcalls'
+LOGIN_ASPIRING_REDIRECT_URL= 'jobcalls'
+LOGIN_ADMIN_REDIRECT_URL = 'jobcalls'#accounts
+
+# USER MODEL AND LOGIN 
+AUTH_USER_MODEL = 'accounts.User'
+# AUTHEMAILBACKEND
+AUTHENTICATION_BACKENDS = [
+    'apps.custom_session.backends.AuthEmailBackend',#email-password
+    'django.contrib.auth.backends.ModelBackend',#only admin - username-password
+]
