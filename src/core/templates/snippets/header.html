@@ -37,7 +37,7 @@
 	<a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
 	{% else %}
 		{% if user.is_company %}
-		<a class="p-2 text-dark" href="{% url 'jobcall.jobcalls' %}">Create new job call</a>
+		<a class="p-2 text-dark" href="{% url 'company.create_jobcall' %}">Create new job call</a>
 		{% endif %}
 		
 		<a class="p-2 text-dark" href="{% url 'logout' %}">Logout</a>

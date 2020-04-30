@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'admin_object_actions',
     'apps.accounts',
     'apps.jobcall',
-    'apps.custom_session'
+    'apps.custom_session',
+    'apps.company'
 ]
 
 MIDDLEWARE = [
