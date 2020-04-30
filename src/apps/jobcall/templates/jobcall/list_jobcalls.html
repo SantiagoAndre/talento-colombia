@@ -1,0 +1,30 @@
+{% extends 'jobcall/jobcall.master.html' %}
+
+{% block left-col-title %}Recent job calls{% endblock %}
+
+{% block left-col %}
+  {% for jobcall in jobcalls %}
+  <div class="card mb-3 mt-3 shadow-sm">
+    <div class="row no-gutters">
+      <div class="col {% if jobcall.state == jobcall.CLOSED %} text-danger {% else %}text-primary{% endif %}">
+        <div class="card-body">
+          <h5 class="card-title">{{ jobcall.position }}</h5>
+          <p class="card-text text-muted">{{ jobcall.description }}</p>
+          <p class="card-text"><small class="text-muted">Company: {{jobcall.company.first_name}}</small></p>
+          {% if jobcall.state == jobcall.CLOSED %}
+          <p class="card-text"><small class="text-muted text-danger"> Closed</small></p>
+          {% else %}
+          <p class="card-text"><small class="text-muted"> Closed date: {{jobcall.closing_date}}</small></p>
+            {% if not user.is_authenticated  %}
+            <button type="button" onclick="location.href = 'apply/{{jobcall.id}}'"  class="btn btn-primary">Apply</button>
+            {% elif user not in jobcall.aspirants.all  %}
+            <button type="button" onclick="location.href = 'apply/{{jobcall.id}}'"  class="btn btn-primary">Apply</button>
+            {% endif %}
+          {% endif %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}

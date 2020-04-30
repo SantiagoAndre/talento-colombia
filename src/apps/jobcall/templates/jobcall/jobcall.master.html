@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+<!-- Subplantilla maestra, layout de 2 columnas -->
+{% block content %}
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <h3 class="border-bottom border-gray pb-2 mb-0">{% block left-col-title %}{% endblock %}</h3>
+    {% block left-col %}{% endblock %}
+    </div>
+    <div class="col-12 col-lg-4">
+      {% block right-col %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}
