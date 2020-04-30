@@ -21,8 +21,6 @@ class UserCreationForm(forms.ModelForm):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
         username = self.cleaned_data.get("username")
-        if User.objects.filter(email=""):
-            raise forms.ValidationError("Constraint error,user already exists with blank email. Please update email of this user")
         if User.objects.filter(username=username):
             raise forms.ValidationError("A user with that username already exists.")
         if password1 and password2 and password1 != password2:
