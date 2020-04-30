@@ -19,7 +19,9 @@ class JobCall(models.Model):
     state = models.PositiveSmallIntegerField(choices=STATES,default=OPEN,verbose_name = _("state"))
     company = models.ForeignKey(CompanyUser,verbose_name=_("company"),on_delete=models.CASCADE)
     aspirants = models.ManyToManyField(AspiringUser,verbose_name=_("aspirants"),blank=True)
-    
+    @property
+    def is_open(self):
+        return self.state  == self.OPEN
     
 
     class Meta:

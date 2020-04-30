@@ -17,6 +17,15 @@ class User(AbstractUser):
     )
     user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES,default=ASPIRING,verbose_name=_("rol"))
     email = models.EmailField(unique=True,null=True)
+    def __eq__(self,other):
+        return  self.username == other.username
+
+    @property
+    def is_aspirant(self):
+        return self.user_type == self.ASPIRING
+    @property
+    def is_company(self):
+        return self.user_type == self.COMPANY
 class AspiringUser(User):
     # fields
     # career, etc

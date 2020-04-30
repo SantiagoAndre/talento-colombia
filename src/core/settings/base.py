@@ -119,9 +119,9 @@ LOGOUT_URL = 'logout'
 
 LOGOUT_REDIRECT_URL = '/jobcalls/'
 
-LOGIN_COMPANY_REDIRECT_URL = 'compay/jobcalls'
-LOGIN_ASPIRING_REDIRECT_URL= 'jobcalls'
-LOGIN_ADMIN_REDIRECT_URL = 'jobcalls'#accounts
+LOGIN_COMPANY_REDIRECT_URL = '/compay/jobcalls'
+LOGIN_ASPIRING_REDIRECT_URL= '/jobcalls'
+LOGIN_ADMIN_REDIRECT_URL = '/jobcalls'#accounts
 
 # USER MODEL AND LOGIN 
 AUTH_USER_MODEL = 'accounts.User'
