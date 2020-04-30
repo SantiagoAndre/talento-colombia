@@ -16,7 +16,7 @@ class User(AbstractUser):
         (ADMIN, _('admin')),
     )
     user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES,default=ASPIRING,verbose_name=_("rol"))
-    email = models.EmailField(unique=True,blank=True)
+    email = models.EmailField(unique=True,null=True)
 class AspiringUser(User):
     # fields
     # career, etc
