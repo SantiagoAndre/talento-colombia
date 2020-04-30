@@ -31,6 +31,8 @@
 	<a class="p-2 text-dark" href="{% url 'jobcall.jobcalls' %}">View Job Calls</a>
 	{% elif user.is_aspirant %}
 	<a class="p-2 text-dark" href="{% url 'jobcall.jobcalls' %}">View Job Calls</a>
+	{% elif user.is_company %}
+	<a class="p-2 text-dark" href="{% url 'company.jobcalls' %}">View my Job Calls</a>
 	{% endif %}
 
 	{% if not user.is_authenticated %}
