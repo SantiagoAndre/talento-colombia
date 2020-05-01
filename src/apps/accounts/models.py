@@ -19,7 +19,8 @@ class User(AbstractUser):
     email = models.EmailField(unique=True,null=True)
     def __eq__(self,other):
         return  self.username == other.username
-
+    def __hash__(self):
+        return super(User,self).__hash__()
     @property
     def is_aspirant(self):
         return self.user_type == self.ASPIRING
