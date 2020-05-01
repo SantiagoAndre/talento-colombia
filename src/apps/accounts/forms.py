@@ -33,7 +33,8 @@ class UserCreationForm(forms.ModelForm):
         username= self.cleaned_data.get("username")
         is_superuser = False
         if user_type == User.ADMIN:
-            Model = User
+            Model = CompanyUser # para que pueda regitrar convocatorias
+                                # ya que el admin tiene todos los permisos
             is_superuser = True
         elif user_type == User.COMPANY:
             Model = CompanyUser
