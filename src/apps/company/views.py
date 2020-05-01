@@ -1,9 +1,16 @@
 from apps.accounts.models import CompanyUser
 from django.views.generic import CreateView,View,DetailView
+from django.contrib.auth import get_user_model
+from django.utils.decorators import method_decorator
 from django.shortcuts import render
+
 from .forms import CreateJobCallForm
 from apps.jobcall.models import JobCall
+from apps.custom_session.decorators import role_required
+
+User = get_user_model()
 # Create your views here.
+@method_decorator(role_required(rol=User.COMPANY),name="dispatch")
 class CreateJobCallView(CreateView):
   
     form_class = CreateJobCallForm
@@ -14,6 +21,7 @@ class CreateJobCallView(CreateView):
         form.instance.company = CompanyUser.objects.get(pk=self.request.user.id)
         return super().form_valid(form)
   
+@method_decorator(role_required(rol=User.COMPANY),name="dispatch")
 class CompanyJobCallsView(View):
   def get(self, request): 
     context = {
@@ -29,6 +37,7 @@ class CompanyJobCallsView(View):
   def apply(self,jobcall):
     print(jobcall)
 
+@method_decorator(role_required(rol=User.COMPANY),name="dispatch")
 class JobCallDetailsView(DetailView):
   model = JobCall
   template_name = 'company/jobcall_details.html'

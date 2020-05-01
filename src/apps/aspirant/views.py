@@ -1,21 +1,25 @@
+from django.contrib.auth import get_user_model
+from django.utils.decorators import method_decorator
 from django.shortcuts import redirect,render
-from apps.accounts.models import AspiringUser
 from django.views import View
 
+
+from apps.accounts.models import AspiringUser
 from apps.jobcall.models import JobCall
+from apps.custom_session.decorators import role_required
 
-
-
+User = get_user_model()
 
 # Create your views here.
-
+@role_required(rol=User.ASPIRING)
 def apply_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
   if jobcall.is_open:
     user = AspiringUser.objects.get(pk=request.user.id)
     jobcall.aspirants.add(user)
   return redirect('/')
-  
+
+@role_required(rol=User.ASPIRING)
 def discard_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
   if jobcall.is_open:
@@ -23,6 +27,7 @@ def discard_jobcall(request,jobcall_id=None):
     jobcall.aspirants.remove(user)
   return redirect('/')
 
+@method_decorator(role_required(rol=User.ASPIRING),name="dispatch")
 class AllJobCallsView(View):
   def get(self, request): 
     context = {
