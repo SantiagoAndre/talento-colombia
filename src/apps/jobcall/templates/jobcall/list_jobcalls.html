@@ -21,9 +21,9 @@
             {% elif user.is_aspirant %}
               {% if user not in jobcall.aspirants.all  %}
                 
-              <button type="button" onclick="location.href = 'user_apply/{{jobcall.id}}' "  class="btn btn-primary">Apply</button>
+              <button type="button" onclick="location.href = '/aspirant/apply_jobcall/{{jobcall.id}}' "  class="btn btn-primary">Apply</button>
               {% else %}
-              <button type="button" onclick="location.href = 'user_discard/{{jobcall.id}}' "  class="btn btn-primary">Discard</button>
+              <button type="button" onclick="location.href = '/aspirant/discard_jobcall/{{jobcall.id}}' "  class="btn btn-primary">Discard</button>
               {% endif %}
 
             {% elif user.is_company %}

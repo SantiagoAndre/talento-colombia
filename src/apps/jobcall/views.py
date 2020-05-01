@@ -15,21 +15,6 @@ def all_jobcalls(request):
   }
   return render(request, 'jobcall/list_jobcalls.html', context=context)
 
-def user_apply(request,jobcall_id=None):
-  jobcall = JobCall.objects.get(pk=jobcall_id)
-  if jobcall.is_open:
-    user = AspiringUser.objects.get(pk=request.user.id)
-    jobcall.aspirants.add(user)
-  return redirect('/')
-  
-def user_discard(request,jobcall_id=None):
-  jobcall = JobCall.objects.get(pk=jobcall_id)
-  if jobcall.is_open:
-    user = AspiringUser.objects.get(pk=request.user.id)
-    jobcall.aspirants.remove(user)
-  return redirect('/')
-  
-
 
 
 class AllJobCallsView(View):

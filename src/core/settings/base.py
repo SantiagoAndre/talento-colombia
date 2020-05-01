@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.jobcall',
     'apps.custom_session',
-    'apps.company'
+    'apps.company',
+    'apps.aspirant'
 ]
 
 MIDDLEWARE = [
