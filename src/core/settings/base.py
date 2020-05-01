@@ -116,14 +116,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # SESSION SETTINGS
 
 
-LOGIN_URL = 'login'
+LOGIN_URL = '/login'
 LOGOUT_URL = 'logout'
 
 LOGOUT_REDIRECT_URL = '/'
 
 LOGIN_COMPANY_REDIRECT_URL = '/company/'
 LOGIN_ASPIRING_REDIRECT_URL= '/'
-LOGIN_ADMIN_REDIRECT_URL = 'accounts/'#accounts
+LOGIN_ADMIN_REDIRECT_URL = '/accounts/'
 
 # USER MODEL AND LOGIN 
 AUTH_USER_MODEL = 'accounts.User'

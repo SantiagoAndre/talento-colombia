@@ -14,17 +14,15 @@ User = get_user_model()
 @role_required(rol=User.ASPIRING)
 def apply_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
-  if jobcall.is_open:
-    user = AspiringUser.objects.get(pk=request.user.id)
-    jobcall.aspirants.add(user)
+  user = AspiringUser.objects.get(pk=request.user.id)
+  jobcall.aspirants.add(user)
   return redirect('/')
 
 @role_required(rol=User.ASPIRING)
 def discard_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
-  if jobcall.is_open:
-    user = AspiringUser.objects.get(pk=request.user.id)
-    jobcall.aspirants.remove(user)
+  user = AspiringUser.objects.get(pk=request.user.id)
+  jobcall.aspirants.remove(user)
   return redirect('/')
 
 @method_decorator(role_required(rol=User.ASPIRING),name="dispatch")
