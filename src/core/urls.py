@@ -8,6 +8,7 @@ urlpatterns = [
     path('sessions/', include('apps.custom_session.urls')),
     path('company/', include('apps.company.urls')),
     path('aspirant/', include('apps.aspirant.urls')),
+    path('api/', include('apps.apis.urls')),
 
 ]
 

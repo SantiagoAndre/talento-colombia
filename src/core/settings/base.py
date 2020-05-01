@@ -29,11 +29,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'admin_object_actions',
+    'graphene_django',
     'apps.accounts',
     'apps.jobcall',
     'apps.custom_session',
     'apps.company',
-    'apps.aspirant'
+    'apps.aspirant',
+    'apps.apis'
 ]
 
 MIDDLEWARE = [
@@ -129,6 +131,13 @@ LOGIN_ADMIN_REDIRECT_URL = '/accounts/'
 AUTH_USER_MODEL = 'accounts.User'
 # AUTHEMAILBACKEND
 AUTHENTICATION_BACKENDS = [
+    'graphql_jwt.backends.JSONWebTokenBackend',
     'apps.custom_session.backends.AuthEmailBackend',#email-password
     'django.contrib.auth.backends.ModelBackend',#only admin - username-password
 ]
+# GRAPHENE CONF
+
+GRAPHENE = {
+    'SCHEMA': 'apps.apis.schema.ROOT_SCHEMA',
+   
+}
