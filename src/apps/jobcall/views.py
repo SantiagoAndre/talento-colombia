@@ -21,7 +21,6 @@ class AllJobCallsView(View):
   def get(self, request): 
     context = {
     'jobcalls': JobCall.objects.all().order_by('closing_date'),
-    'apply_function': self.apply
     }
     return render(request, 'jobcall/list_jobcalls.html', context=context)
 
@@ -30,8 +29,6 @@ class AllJobCallsView(View):
 
   def push(self, request):
     pass
-  def apply(self,jobcall):
-    print(jobcall)
 
 class ApplyJobCallView(CreateView):
   model = AnonymousInscription
