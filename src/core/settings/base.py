@@ -46,7 +46,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'crum.CurrentRequestUserMiddleware'
+    'crum.CurrentRequestUserMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -139,5 +140,8 @@ AUTHENTICATION_BACKENDS = [
 
 GRAPHENE = {
     'SCHEMA': 'apps.apis.schema.ROOT_SCHEMA',
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ]
    
 }
