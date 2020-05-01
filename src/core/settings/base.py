@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'admin_object_actions',
     'apps.accounts',
     'apps.jobcall',
-    'apps.custom_session'
+    'apps.custom_session',
+    'apps.company'
 ]
 
 MIDDLEWARE = [
@@ -119,7 +120,7 @@ LOGOUT_URL = 'logout'
 
 LOGOUT_REDIRECT_URL = '/'
 
-LOGIN_COMPANY_REDIRECT_URL = '/compay/jobcalls'
+LOGIN_COMPANY_REDIRECT_URL = '/company/'
 LOGIN_ASPIRING_REDIRECT_URL= '/'
 LOGIN_ADMIN_REDIRECT_URL = 'accounts/'#accounts
 

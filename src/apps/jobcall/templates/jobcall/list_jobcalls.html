@@ -14,7 +14,7 @@
           {% if  not jobcall.is_open %}
           <p class="card-text"><small class="text-muted text-danger"> Closed</small></p>
           {% else %}
-          <p class="card-text"><small class="text-muted"> Closed date: {{jobcall.closing_date}}</small></p>
+          <p class="card-text"><small class="text-muted"> Closing date: {{jobcall.closing_date}}</small></p>
             {% if not user.is_authenticated  %}
             <button type="button" onclick="location.href = 'apply/{{jobcall.id}}'"  class="btn btn-primary">Apply</button>
             
@@ -25,6 +25,9 @@
               {% else %}
               <button type="button" onclick="location.href = 'user_discard/{{jobcall.id}}' "  class="btn btn-primary">Discard</button>
               {% endif %}
+
+            {% elif user.is_company %}
+              <button type="button" onclick="location.href = '/company/details/{{jobcall.id}}' "  class="btn btn-primary">Details</button>
             {% endif %}
           {% endif %}
           

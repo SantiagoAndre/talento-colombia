@@ -35,7 +35,7 @@ def user_discard(request,jobcall_id=None):
 class AllJobCallsView(View):
   def get(self, request): 
     context = {
-    'jobcalls': JobCall.objects.all().order_by('-closing_date'),
+    'jobcalls': JobCall.objects.all().order_by('closing_date'),
     'apply_function': self.apply
     }
     return render(request, 'jobcall/list_jobcalls.html', context=context)
