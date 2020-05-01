@@ -1,5 +1,5 @@
 from apps.accounts.models import CompanyUser
-from django.views.generic import CreateView,View
+from django.views.generic import CreateView,View,DetailView
 from django.shortcuts import render
 from .forms import CreateJobCallForm
 from apps.jobcall.models import JobCall
@@ -28,3 +28,8 @@ class CompanyJobCallsView(View):
     pass
   def apply(self,jobcall):
     print(jobcall)
+
+class JobCallDetailsView(DetailView):
+  model = JobCall
+  template_name = 'company/jobcall_details.html'
+  queryset = JobCall.objects.all()

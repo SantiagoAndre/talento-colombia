@@ -14,3 +14,4 @@ class CreateJobCallForm(forms.ModelForm):
         }
     def save(self, commit=True): 
         return super().save(commit=commit)
+
