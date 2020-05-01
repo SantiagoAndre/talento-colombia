@@ -1,0 +1,768 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "accounts",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "accounts",
+        "model": "aspiringuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "accounts",
+        "model": "companyuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "jobcall",
+        "model": "jobcall"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "jobcall",
+        "model": "anonymousinscription"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x1aqx5edmen65u0cg5knloufdovfl6fh",
+    "fields": {
+        "session_data": "MjBlNGY3NWYzNTdjMGQ5YTU5MjdiOTczZjdlYWViZmZiMzFjMjlmNDp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiYXBwcy5jdXN0b21fc2Vzc2lvbi5iYWNrZW5kcy5BdXRoRW1haWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzQ0YjA1Y2U5YmNiNjUyMTUzMTFjMjZmOWNjY2UwNTViMDdjNjdmNiJ9",
+        "expire_date": "2020-05-15T02:52:51.867Z"
+    }
+},
+{
+    "model": "jobcall.anonymousinscription",
+    "pk": 1,
+    "fields": {
+        "full_name": "anonimus inscription 1",
+        "jobcall": 1,
+        "curriculum": "jobcall/curriculums/hoja-de-vida.doc"
+    }
+},
+{
+    "model": "jobcall.anonymousinscription",
+    "pk": 2,
+    "fields": {
+        "full_name": "anonymous aspirant 2",
+        "jobcall": 2,
+        "curriculum": "jobcall/curriculums/hoja-de-vida_proyecto_1_g3kjuAY.odt"
+    }
+},
+{
+    "model": "jobcall.anonymousinscription",
+    "pk": 3,
+    "fields": {
+        "full_name": "anonymous aspirant 2",
+        "jobcall": 3,
+        "curriculum": "jobcall/curriculums/hoja-de-vida_proyecto_1.doc"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 7,
+        "codename": "add_aspiringuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 7,
+        "codename": "change_aspiringuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 7,
+        "codename": "delete_aspiringuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 7,
+        "codename": "view_aspiringuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 8,
+        "codename": "add_companyuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 8,
+        "codename": "change_companyuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 8,
+        "codename": "delete_companyuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 8,
+        "codename": "view_companyuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add job call",
+        "content_type": 9,
+        "codename": "add_jobcall"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change job call",
+        "content_type": 9,
+        "codename": "change_jobcall"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete job call",
+        "content_type": 9,
+        "codename": "delete_jobcall"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view job call",
+        "content_type": 9,
+        "codename": "view_jobcall"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add anonymous inscription",
+        "content_type": 10,
+        "codename": "add_anonymousinscription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change anonymous inscription",
+        "content_type": 10,
+        "codename": "change_anonymousinscription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete anonymous inscription",
+        "content_type": 10,
+        "codename": "delete_anonymousinscription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view anonymous inscription",
+        "content_type": 10,
+        "codename": "view_anonymousinscription"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$faippQ9uqSR5$afco/SY4YzqjIRNcPpLqcd4kJj6Hk/kn391/C7aF59Q=",
+        "last_login": "2020-05-01T00:04:38.088Z",
+        "is_superuser": true,
+        "username": "santiago",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-05-01T00:04:14.073Z",
+        "user_type": 1,
+        "email": "santiago@mail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$CZiAhCKkROUf$WJradaNfc7OA4tfltROFrpQjb79LdED+7Ju3TKqjpmQ=",
+        "last_login": "2020-05-01T02:50:24.339Z",
+        "is_superuser": false,
+        "username": "company",
+        "first_name": "Talento Humano",
+        "last_name": "sas",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-01T00:04:54.968Z",
+        "user_type": 2,
+        "email": "company@mail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$Exz60DyxJgqT$HrW9Ezkp3rZry8HdMDWSNyn8l4YYGhyE5Lk6k4IkGnk=",
+        "last_login": "2020-05-01T00:16:01.340Z",
+        "is_superuser": false,
+        "username": "amazon",
+        "first_name": "Amazon",
+        "last_name": "AWS",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-01T00:05:13.454Z",
+        "user_type": 2,
+        "email": "amazon@mail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$JiN1zSEYIz23$jARWTxLMPXECBOc7Hgf4M06dgfBUMRM52gT29neuPZ4=",
+        "last_login": "2020-05-01T00:13:43.756Z",
+        "is_superuser": false,
+        "username": "aspiring1",
+        "first_name": "Camilo Andres",
+        "last_name": "Rivera",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-01T00:05:32.203Z",
+        "user_type": 1,
+        "email": "camilo@mail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$aiC05qDyvo1v$wQok402EyN4CQ5ez/2PDwB0ekQhYDZm9CPV+Tuh2KVs=",
+        "last_login": "2020-05-01T02:52:51.851Z",
+        "is_superuser": false,
+        "username": "aspiring2",
+        "first_name": "Aspirante",
+        "last_name": "Uno",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-05-01T00:05:46.701Z",
+        "user_type": 1,
+        "email": "aspirant@mail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.aspiringuser",
+    "pk": 4,
+    "fields": {}
+},
+{
+    "model": "accounts.aspiringuser",
+    "pk": 5,
+    "fields": {}
+},
+{
+    "model": "accounts.companyuser",
+    "pk": 2,
+    "fields": {}
+},
+{
+    "model": "accounts.companyuser",
+    "pk": 3,
+    "fields": {}
+},
+{
+    "model": "jobcall.jobcall",
+    "pk": 1,
+    "fields": {
+        "closing_date": "2020-05-09T00:00:00Z",
+        "position": "Administrador",
+        "description": "adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar adminitrar",
+        "state": 1,
+        "company": 2,
+        "_order": 0,
+        "aspirants": [
+            4
+        ]
+    }
+},
+{
+    "model": "jobcall.jobcall",
+    "pk": 2,
+    "fields": {
+        "closing_date": "2020-05-09T00:00:00Z",
+        "position": "Web Master",
+        "description": "web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall web jobcall",
+        "state": 1,
+        "company": 2,
+        "_order": 1,
+        "aspirants": []
+    }
+},
+{
+    "model": "jobcall.jobcall",
+    "pk": 3,
+    "fields": {
+        "closing_date": "2020-05-07T00:00:00Z",
+        "position": "Amazon Web Master",
+        "description": "amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master amazon web master",
+        "state": 1,
+        "company": 3,
+        "_order": 0,
+        "aspirants": [
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "jobcall.jobcall",
+    "pk": 4,
+    "fields": {
+        "closing_date": "2020-05-07T00:00:00Z",
+        "position": "Amazon designer",
+        "description": "amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer amazon designer",
+        "state": 1,
+        "company": 3,
+        "_order": 1,
+        "aspirants": [
+            4
+        ]
+    }
+},
+{
+    "model": "jobcall.jobcall",
+    "pk": 5,
+    "fields": {
+        "closing_date": "2020-05-09T00:00:00Z",
+        "position": "Astronauta",
+        "description": "cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo cargo",
+        "state": 1,
+        "company": 2,
+        "_order": 2,
+        "aspirants": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-05-01T00:04:55.226Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "company",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2020-05-01T00:05:13.702Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "amazon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2020-05-01T00:05:32.451Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "aspiring1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2020-05-01T00:05:46.955Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "aspiring2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2020-05-01T00:06:10.940Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "company",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2020-05-01T00:06:28.655Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "3",
+        "object_repr": "amazon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2020-05-01T00:06:57.514Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "4",
+        "object_repr": "aspiring1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-05-01T00:07:12.571Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "5",
+        "object_repr": "aspiring2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email\"]}}]"
+    }
+}
+]
