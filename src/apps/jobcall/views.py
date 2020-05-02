@@ -2,7 +2,6 @@
 from django.views.generic import CreateView
 from django.shortcuts import redirect,render
 from django.views import View
-from apps.accounts.models import AspiringUser
 # Create your views here.
 from .forms import ApplyJobCallForm
 from .models import JobCall,AnonymousInscription

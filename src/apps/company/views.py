@@ -1,4 +1,4 @@
-from apps.accounts.models import CompanyUser
+
 from django.views.generic import CreateView,View,DetailView
 from django.contrib.auth import get_user_model
 from django.utils.decorators import method_decorator
@@ -18,7 +18,7 @@ class CreateJobCallView(CreateView):
     success_url = '/company'
     def form_valid(self, form):
         #form.instance.jobcall = JobCall.objects.get(pk=self.kwargs['jobcall_id'])
-        form.instance.company = CompanyUser.objects.get(pk=self.request.user.id)
+        form.instance.company = self.request.user
         return super().form_valid(form)
   
 @method_decorator(role_required(rol=User.COMPANY),name="dispatch")

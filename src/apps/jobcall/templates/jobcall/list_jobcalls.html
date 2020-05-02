@@ -25,8 +25,8 @@
               {% else %}
               <button type="button" onclick="location.href = '/aspirant/discard_jobcall/{{jobcall.id}}' "  class="btn btn-primary">Discard</button>
               {% endif %}
-
-            {% elif user.is_company %}
+            {% endif %}
+            {% if user.is_company %}
               <button type="button" onclick="location.href = '/company/details/{{jobcall.id}}' "  class="btn btn-primary">Details</button>
             {% endif %}
           {% endif %}

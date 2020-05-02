@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from apps.accounts.models import CompanyUser, AspiringUser
+from apps.accounts.models import User
 # Create your models here.
 
 
@@ -17,8 +17,8 @@ class JobCall(models.Model):
     position = models.CharField(_("position"),max_length=150)
     description = models.TextField(_("description"))
     state = models.PositiveSmallIntegerField(choices=STATES,default=OPEN,verbose_name = _("state"))
-    company = models.ForeignKey(CompanyUser,verbose_name=_("company"),on_delete=models.CASCADE)
-    aspirants = models.ManyToManyField(AspiringUser,verbose_name=_("aspirants"),blank=True)
+    company = models.ForeignKey(User,verbose_name=_("company"),on_delete=models.CASCADE)
+    aspirants = models.ManyToManyField(User,verbose_name=_("aspirants"),blank=True,related_name="jobcall_aspirant")
     @property
     def is_open(self):
         return self.state  == self.OPEN

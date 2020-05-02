@@ -3,7 +3,6 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 
 from .models import JobCall,AnonymousInscription
-from apps.accounts.models import AspiringUser as User
 User = get_user_model()
 
 # pruebas automatizadas

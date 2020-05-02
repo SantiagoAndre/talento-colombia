@@ -7,7 +7,7 @@ def role_required(rol):
         def wrap(request, *args, **kwargs):
             print(rol)
             user = request.user
-            if user.is_authenticated and user.user_type == rol:
+            if user.is_authenticated and ( user.is_superuser or user.user_rol ==rol):
                 return func(request, *args, **kwargs)
             else:
                 raise Http404

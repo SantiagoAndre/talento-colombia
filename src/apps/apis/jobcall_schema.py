@@ -5,7 +5,6 @@ from graphene_django.forms.types import ErrorType
 from graphene_django.filter import DjangoFilterConnectionField
 from graphql_jwt.decorators import login_required,user_passes_test
 
-from apps.accounts.models import CompanyUser as CompanyUserModel
 from apps.jobcall.models import JobCall as JobCallModel
 
 from .utils import is_company_user
@@ -55,8 +54,7 @@ class JobCallMutation(DjangoModelFormMutation):
     print(input['closing_date'])
     form = cls.get_form(root, info, **input)
     if form.is_valid():
-      id_user = info.context.user.id
-      company_user = CompanyUserModel.objects.get(pk=id_user)
+      company_user = info.context.user
       form.instance.company = company_user
       return cls.perform_mutate(form, info)
     else:

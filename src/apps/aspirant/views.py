@@ -4,7 +4,6 @@ from django.shortcuts import redirect,render
 from django.views import View
 
 
-from apps.accounts.models import AspiringUser
 from apps.jobcall.models import JobCall
 from apps.custom_session.decorators import role_required
 
@@ -14,15 +13,13 @@ User = get_user_model()
 @role_required(rol=User.ASPIRING)
 def apply_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
-  user = AspiringUser.objects.get(pk=request.user.id)
-  jobcall.aspirants.add(user)
+  jobcall.aspirants.add(request.user)
   return redirect('/')
 
 @role_required(rol=User.ASPIRING)
 def discard_jobcall(request,jobcall_id=None):
   jobcall = JobCall.objects.get(pk=jobcall_id)
-  user = AspiringUser.objects.get(pk=request.user.id)
-  jobcall.aspirants.remove(user)
+  jobcall.aspirants.remove(request.user)
   return redirect('/')
 
 @method_decorator(role_required(rol=User.ASPIRING),name="dispatch")

@@ -23,18 +23,7 @@ class User(AbstractUser):
         return super(User,self).__hash__()
     @property
     def is_aspirant(self):
-        return self.user_type == self.ASPIRING
+        return self.is_superuser or self.user_type == self.ASPIRING
     @property
     def is_company(self):
-        return self.user_type == self.COMPANY
-class AspiringUser(User):
-    # fields
-    # career, etc
-    pass
-
-
-class CompanyUser(User):
-    #fields 
-    # type company, etc
-    pass
-
+        return self.is_superuser or self.user_type == self.COMPANY
