@@ -119,8 +119,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # SESSION SETTINGS
 
 
-LOGIN_URL = '/login'
-LOGOUT_URL = 'logout'
+LOGIN_URL = '/sessions/login'
+LOGOUT_URL = '/sessions/logout'
 
 LOGOUT_REDIRECT_URL = '/'
 

@@ -50,7 +50,8 @@
     
 ### Ejecutar
     Para ejecutar el proyecto django en local ejecuta los siguientes comandos en una terminal dentro del directorio del proyecto.
-         ```pip install -r requirements.txt
+         ```pipenv install
+            pipenv shell
             python manage.py migrate
             python manage.py createsuperuser
             python manage.py runserver
